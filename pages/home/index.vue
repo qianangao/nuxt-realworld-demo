@@ -85,7 +85,8 @@
               name:'home',
               query:{
                 page:count,
-                tag:$route.query.tag
+                tag:$route.query.tag,
+                tab:'tag'
               }
             }">
                 {{count}}
@@ -120,17 +121,19 @@
 </template>
 
 <script>
-import {getArticles} from "@/api/articles.js"
+import {getArticles, getFeedArticles} from "@/api/articles.js"
 import {getTags} from "@/api/tags.js"
 import {mapState} from 'vuex'
 export default {
     name: "homePage",
-   async asyncData ({query}) { 
+   async asyncData ({query,store}) { 
      const page = Number.parseInt(query.page || 1)
      const limit = 10
      const {tag} = query
+     const tab = query.tab || 'global_feed'
+     const getUserArticles = store.state.user && tab === 'your_feed' ?getFeedArticles:getArticles
      const [articlesRes,tagsRes] = Promise.all([
-       await getArticles({
+       await getUserArticles({
        tag,
        limit,
        offset: (page-1) * limit
@@ -146,7 +149,7 @@ export default {
        limit,
        page,
        tag,
-       tab:query.tab
+       tab
      }
       },
       computed:{
