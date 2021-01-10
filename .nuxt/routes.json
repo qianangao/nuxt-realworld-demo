@@ -1,0 +1,43 @@
+[
+  {
+    "path": "/",
+    "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\home"
+      },
+      {
+        "path": "/login",
+        "name": "login",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\login"
+      },
+      {
+        "path": "/register",
+        "name": "register",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\login"
+      },
+      {
+        "path": "/profile",
+        "name": "profile",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\profile"
+      },
+      {
+        "path": "/settings",
+        "name": "settings",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\settings"
+      },
+      {
+        "path": "/editor",
+        "name": "editor",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\editor"
+      },
+      {
+        "path": "/article",
+        "name": "article",
+        "component": "D:\\\\code\\\\lagou\\\\module3_3\\\\realworld-demo\\\\pages\\\\article"
+      }
+    ]
+  }
+]
